@@ -6,13 +6,9 @@ if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
   exit 0
 fi
 
-echo "Session start hook running..."
+echo "Session start hook: installing dependencies..."
 
-# No dependencies to install yet.
-# Add dependency installation steps here as the project grows.
-# Examples:
-#   npm install
-#   pip install -r requirements.txt
-#   bundle install
+cd "$CLAUDE_PROJECT_DIR"
+npm install
 
-echo "Session start hook complete."
+echo "Session start hook: done."
